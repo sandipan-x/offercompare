@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Compare Job Offers — Total Compensation Calculator | OfferCompare</title>
+<meta name="description" content="Two job offers, one true number — total comp compared side by side.">
+<link rel="canonical" href="https://offercompare.fixoraa.tech/">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="How to Compare Job Offers — Total Compensation Calculator | OfferCompare">
+<meta property="og:description" content="Two job offers, one true number — total comp compared side by side.">
+<meta property="og:url" content="https://offercompare.fixoraa.tech/">
+<meta property="og:type" content="website">
+<script defer src="https://t.fixoraa.tech/track.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "OfferCompare",
+      "url": "https://offercompare.fixoraa.tech",
+      "applicationCategory": "Career Tools",
+      "operatingSystem": "Web",
+      "description": "Two job offers, one true number \u2014 total comp compared side by side.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"How do I compare two job offers beyond salary?","acceptedAnswer":{"@type":"Answer","text":"Convert each offer to total annual compensation: base salary plus expected bonus plus employer retirement match plus the dollar value of PTO (salary divided by 260 working days per day off). Then divide by actual working hours for a true hourly rate. The offer with the higher true number usually wins, before you weigh intangibles like the team and growth."}},
+        {"@type":"Question","name":"How should I value a target bonus?","acceptedAnswer":{"@type":"Answer","text":"Use last year's actual payout for the role, not the target percentage on the offer letter \u2014 payouts commonly range from 50 to 120 percent of target. Ask the recruiter what the role paid out last year and whether you must be employed on the payout date to receive it."}},
+        {"@type":"Question","name":"Is a 401(k) match really worth that much?","acceptedAnswer":{"@type":"Answer","text":"Yes. A 5% match on $120,000 is $6,000 a year of extra pay, and invested over decades it compounds into six figures. But check the vesting schedule first \u2014 with three-year cliff vesting, the match is worth zero if you leave after two years."}},
+        {"@type":"Question","name":"How do you put a dollar value on PTO days?","acceptedAnswer":{"@type":"Answer","text":"Divide annual salary by 260 working days to get your daily rate, then multiply by PTO days. At $120,000 salary, each PTO day is worth about $462. For unlimited PTO policies, enter around 12 days \u2014 people with unlimited plans take fewer days on average than those with defined banks."}},
+        {"@type":"Question","name":"What is the true hourly rate and why does it matter?","acceptedAnswer":{"@type":"Answer","text":"It is total compensation divided by actual working hours (2,080 minus PTO days times 8). It captures both sides of the deal: more pay raises it, more time off raises it too by shrinking the hours you work. It is the fairest single number for comparing offers with different PTO or expected hours."}},
+        {"@type":"Question","name":"Should I tell a company about my other offer?","acceptedAnswer":{"@type":"Answer","text":"Yes, carefully. A competing offer is your strongest negotiating leverage: express genuine preference for their team and ask if they can close the compensation gap. Keep it factual and polite \u2014 never bluff with an offer you do not have, and never share the other company's name unless asked directly."}}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#F2FAF6;--surface:#FFFFFF;--tint:#DDF4E8;--accent:#1E804F;--accentdeep:#1E6D46;--accent-ink:#FFFFFF;--ink:#1F3329;--muted:#547866;--line:#A4D1BA;--footmuted:#B3BEB8;--footlink:#F0FAF5;--bodyfont:'Wix Madefor Display',system-ui,sans-serif;--headfont:'Wix Madefor Display',system-ui,sans-serif}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:var(--bodyfont);background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.fx-container{max-width:1120px;margin:0 auto;padding:0 20px}
+.fx-header{background:var(--surface);border-bottom:3px solid var(--accent);position:sticky;top:0;z-index:50}
+.fx-header .fx-container{display:flex;align-items:center;gap:14px;padding:12px 20px;flex-wrap:wrap}
+.fx-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.fx-tile{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accentdeep));color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;box-shadow:0 3px 0 rgba(0,0,0,.12)}
+.fx-name{font-weight:800;font-size:20px;letter-spacing:-.02em;font-family:var(--headfont)}
+.fx-nav{margin-left:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.fx-btn{display:inline-block;padding:9px 18px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;border:2px solid var(--accent);color:var(--accent);transition:transform .12s ease;background:transparent}
+.fx-btn:hover{transform:translateY(-1px)}
+.fx-btn.solid{background:var(--accent);color:var(--accent-ink)}
+.fx-badge{display:inline-block;padding:7px 14px;border-radius:999px;background:var(--tint);color:var(--accentdeep);font-weight:700;font-size:13px;border:1.5px dashed var(--accent)}
+.article-sec{margin:44px 0;max-width:800px}
+.article-sec h2{font-size:24px;letter-spacing:-.01em;margin:34px 0 12px;font-weight:800;font-family:var(--headfont)}
+.article-sec p{margin-bottom:14px}
+.article-sec ul,.article-sec ol{margin:0 0 14px 22px}
+.article-sec li{margin-bottom:6px}
+.faq-sec{margin:36px 0;max-width:800px}
+.faq-sec h2{font-size:24px;font-weight:800;letter-spacing:-.01em;margin-bottom:16px;font-family:var(--headfont)}
+.faq-sec details{background:var(--surface);border:2px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq-sec summary{padding:16px 18px;font-weight:700;cursor:pointer;list-style:none;font-size:16px}
+.faq-sec summary::-webkit-details-marker{display:none}
+.faq-sec summary:hover{color:var(--accent)}
+.faq-sec details[open] summary{border-bottom:2px solid var(--line);color:var(--accent)}
+.faq-sec details p{padding:14px 18px;font-size:15px}
+.fx-footer{background:var(--ink);color:var(--bg);margin-top:48px;padding:40px 0 34px}
+.fx-footer .fx-brand{font-size:22px;font-weight:800;margin-bottom:8px;color:#fff;font-family:var(--headfont)}
+.fx-footer p{font-size:15px;color:var(--footmuted);max-width:640px;margin-bottom:14px}
+.fx-footer nav{display:flex;gap:18px;margin-bottom:16px}
+.fx-footer nav a{color:#fff;font-weight:700;text-decoration:none;border-bottom:2px solid var(--accent)}
+.fx-credit{font-size:14px!important}
+.fx-credit a{color:var(--footlink);font-weight:700}
+@media(max-width:760px){.fx-nav{margin-left:0}}
+
+.oc-hero{padding:44px 0 6px;text-align:center}
+.oc-eyebrow{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);background:var(--tint);border:1px solid var(--line);padding:7px 16px;border-radius:999px;margin-bottom:16px}
+.oc-hero h1{font-size:clamp(32px,5vw,52px);line-height:1.08;letter-spacing:-.025em;font-weight:800;margin-bottom:12px}
+.oc-sub{font-size:18px;color:var(--muted);max-width:660px;margin:0 auto}
+.oc-verdict{margin:28px 0 0;background:var(--accent);color:var(--accent-ink);border-radius:20px;padding:22px 26px;text-align:center;box-shadow:0 12px 28px rgba(30,128,79,.25)}
+.oc-verdict .big{font-size:clamp(22px,3.4vw,30px);font-weight:800;letter-spacing:-.01em}
+.oc-verdict .small{font-size:14px;opacity:.9;margin-top:6px}
+.oc-panels{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.oc-panel{background:var(--tint);border:2px solid var(--line);border-radius:22px;padding:24px}
+.oc-panel h2{font-size:20px;font-weight:800;margin-bottom:4px}
+.oc-panel .tag{font-size:13px;color:var(--muted);margin-bottom:16px}
+.oc-field{margin-bottom:14px}
+.oc-field label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}
+.oc-field input{font:inherit;font-weight:600;font-size:16px;padding:10px 12px;border:2px solid var(--line);border-radius:12px;width:100%;color:var(--ink);background:#fff}
+.oc-field input:focus{outline:3px solid var(--tint);border-color:var(--accent)}
+.oc-name{font-size:18px!important;font-weight:800!important}
+.oc-results{margin-top:18px;background:var(--surface);border-radius:16px;padding:18px;border:2px solid var(--line)}
+.oc-row{display:flex;justify-content:space-between;gap:10px;padding:8px 2px;border-bottom:1px dashed var(--line);font-size:15px}
+.oc-row:last-child{border-bottom:0}
+.oc-row .k{color:var(--muted)}
+.oc-row .v{font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+.oc-hourly{margin-top:12px;text-align:center;background:var(--ink);color:#fff;border-radius:14px;padding:16px}
+.oc-hourly .n{font-size:38px;font-weight:800;font-variant-numeric:tabular-nums}
+.oc-hourly .l{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+.oc-winner{outline:3px solid var(--accent)}
+.oc-note{margin-top:16px;font-size:14px;color:var(--muted);text-align:center;max-width:720px;margin-left:auto;margin-right:auto}
+@media(max-width:760px){.oc-panels{grid-template-columns:1fr}}
+
+</style>
+</head>
+<body>
+<header class="fx-header">
+  <div class="fx-container">
+    <a class="fx-logo" href="https://offercompare.fixoraa.tech/" aria-label="OfferCompare home">
+      <span class="fx-tile" aria-hidden="true">&#9878;</span>
+      <span class="fx-name">OfferCompare</span>
+    </a>
+    <nav class="fx-nav" aria-label="Site">
+      <a class="fx-btn" href="https://fixoraa.tech">Home</a>
+      <a class="fx-btn solid" href="https://fixoraa.tech">More Tools</a>
+      <span class="fx-badge">&#8734; Unlimited Free Usage</span>
+    </nav>
+  </div>
+</header>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pt-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:728px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <div class="origin-top scale-[0.44] sm:scale-100 shrink-0">
+        <script>
+          atOptions = { 'key' : '4e68ac77881c17fe128a46565d9a4e8c', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+        </script>
+        <script src="https://www.highrevenueformat.com/4e68ac77881c17fe128a46565d9a4e8c/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+<main class="fx-container">
+<section class="oc-hero">
+    <span class="oc-eyebrow">Beyond base salary</span>
+    <h1>How to Compare Job Offers</h1>
+    <p class="oc-sub">A $120k offer with a fat bonus, 401(k) match and 25 PTO days can beat a $135k offer with none of those. Enter both — see the true number.</p>
+  </section>
+  <div class="oc-verdict" id="oc-verdict" aria-live="polite">
+    <div class="big" id="oc-verdict-big">Enter both offers to see the winner</div>
+    <div class="small" id="oc-verdict-small">Total compensation = salary + bonus + retirement match + monetized PTO</div>
+  </div>
+  <section class="oc-panels" aria-label="OfferCompare tool">
+    <div class="oc-panel" id="oc-panelA">
+      <h2>Offer A</h2><div class="tag">The one you are leaning toward</div>
+      <div class="oc-field"><label for="oc-aname">Company / label</label><input class="oc-name" id="oc-aname" value="Offer A"></div>
+      <div class="oc-field"><label for="oc-asal">Base salary ($/yr)</label><input type="number" id="oc-asal" value="120000" min="0" step="1000"></div>
+      <div class="oc-field"><label for="oc-abonus">Target bonus (% of salary)</label><input type="number" id="oc-abonus" value="10" min="0" max="200" step="1"></div>
+      <div class="oc-field"><label for="oc-amatch">Retirement match (% of salary)</label><input type="number" id="oc-amatch" value="4" min="0" max="25" step="0.5"></div>
+      <div class="oc-field"><label for="oc-apto">PTO days per year</label><input type="number" id="oc-apto" value="20" min="0" max="60"></div>
+      <div class="oc-results">
+        <div class="oc-row"><span class="k">Total compensation</span><span class="v" id="oc-atotal">$0</span></div>
+        <div class="oc-row"><span class="k">PTO value</span><span class="v" id="oc-aptoV">$0</span></div>
+        <div class="oc-row"><span class="k">Working hours / yr</span><span class="v" id="oc-ahours">0</span></div>
+      </div>
+      <div class="oc-hourly"><div class="n" id="oc-ahourly">$0</div><div class="l">True hourly rate</div></div>
+    </div>
+    <div class="oc-panel" id="oc-panelB">
+      <h2>Offer B</h2><div class="tag">The challenger</div>
+      <div class="oc-field"><label for="oc-bname">Company / label</label><input class="oc-name" id="oc-bname" value="Offer B"></div>
+      <div class="oc-field"><label for="oc-bsal">Base salary ($/yr)</label><input type="number" id="oc-bsal" value="135000" min="0" step="1000"></div>
+      <div class="oc-field"><label for="oc-bbonus">Target bonus (% of salary)</label><input type="number" id="oc-bbonus" value="5" min="0" max="200" step="1"></div>
+      <div class="oc-field"><label for="oc-bmatch">Retirement match (% of salary)</label><input type="number" id="oc-bmatch" value="3" min="0" max="25" step="0.5"></div>
+      <div class="oc-field"><label for="oc-bpto">PTO days per year</label><input type="number" id="oc-bpto" value="15" min="0" max="60"></div>
+      <div class="oc-results">
+        <div class="oc-row"><span class="k">Total compensation</span><span class="v" id="oc-btotal">$0</span></div>
+        <div class="oc-row"><span class="k">PTO value</span><span class="v" id="oc-bptoV">$0</span></div>
+        <div class="oc-row"><span class="k">Working hours / yr</span><span class="v" id="oc-bhours">0</span></div>
+      </div>
+      <div class="oc-hourly"><div class="n" id="oc-bhourly">$0</div><div class="l">True hourly rate</div></div>
+    </div>
+  </section>
+  <p class="oc-note">Bonus and match are entered as expected/typical values — use last year's actual payout, not the brochure maximum. PTO is monetized at salary &divide; 260 working days.</p>
+  <article class="article-sec" aria-label="Guide">
+<h2>Base Salary Is a Teaser, Not the Price</h2>
+    <p>When two offers land on the table, almost everyone compares the base salaries and stops there. That is like comparing two houses by their listing photos. Base salary is typically only 75 to 85 percent of what a job actually pays you — the rest hides in the bonus, the retirement match, paid time off, health coverage, and equity. A $120,000 offer with a 15 percent bonus, a 5 percent 401(k) match, and 25 PTO days is worth roughly $149,000 a year. A $135,000 offer with no bonus, a 3 percent match, and 10 PTO days is worth about $143,000. The "lower" offer wins by six grand a year, and most candidates never do the math.</p>
+    <p>The fix is to convert every offer into a single number: total annual compensation. Add the expected cash bonus, the employer retirement contribution, and the dollar value of PTO, and you can compare offers apples to apples. This page does exactly that, live, for two offers side by side — and then goes one step further by dividing by actual working hours to get your true hourly rate.</p>
+    <h2>Bonuses: Expected, Not Advertised</h2>
+    <p>Bonus plans are written in pencil. A "15% target bonus" means 15% if the company hits its goals and you hit yours — actual payouts routinely land between 50 and 120 percent of target. Before you enter a number in the calculator, ask the recruiter two questions: what did this role's bonus actually pay out last year, and what percentage of employees received the full target? Use last year's real payout as your input, not the target on the offer letter.</p>
+    <p>Also check the bonus mechanics. Is it paid quarterly or annually? Is there a guaranteed first-year minimum (common for senior hires)? Does it require you to be employed on the payout date — meaning quitting in February forfeits last year's bonus? A bonus you will never collect is worth zero, no matter how big the target looks.</p>
+    <h2>The 401(k) Match Is a Raise You Can't See</h2>
+    <p>An employer match is free money with your name on it, and differences compound brutally. A 5 percent match on a $120,000 salary is $6,000 a year of extra compensation; a 3 percent match on $135,000 is $4,050. That $1,950 annual gap, invested over a 30-year career at 7 percent returns, becomes roughly $185,000. Yet candidates routinely ignore the match because it does not show up in the paycheck.</p>
+    <p>Read the vesting schedule before you count it. Many companies use graded vesting — you own 20 percent of the match after one year, 40 after two, and so on — or cliff vesting where you own nothing until year three. If you plan to stay two years at a company with three-year cliff vesting, the match is worth exactly zero to you. The calculator counts the full match; mentally discount it if you will leave before it vests.</p>
+    <h2>PTO Has a Dollar Value — Price It</h2>
+    <p>Paid time off is deferred salary. Each PTO day is worth your daily rate: salary divided by 260 working days. At $120,000, one PTO day is worth $462; the difference between 10 and 25 PTO days is nearly $7,000 a year. That is real money, even though it never appears on a pay stub — it is time you are paid for but do not have to work.</p>
+    <p>Two subtleties matter. First, unlimited PTO is usually worth less than a fixed number, because people with unlimited plans take fewer days on average — around 10 to 12, versus 15-plus at companies with defined banks. Enter 12 days for an "unlimited" policy unless the team can show you real averages. Second, check whether unused PTO pays out when you leave; in some states it must, in others it vanishes, which changes its value as an asset.</p>
+    <h2>The True Hourly Rate Settles Arguments</h2>
+    <p>Total compensation answers "which offer pays more." The true hourly rate answers "which job pays more for my actual life." Divide total comp by real working hours — 2,080 minus PTO days times eight — and the picture sharpens. An offer with more PTO does not just add PTO value; it shrinks the denominator, lifting your effective hourly pay twice.</p>
+    <p>This is also where expected hours belong. A $150,000 offer that demands 60-hour weeks pays a lower true hourly rate than a $120,000 offer at 40 hours. The calculator assumes a standard 40-hour week for both; if one role is known for long hours, adjust mentally — or better, ask the team what last month's hours actually looked like before you sign.</p>
+    <h2>Don't Forget the Rest of the Package</h2>
+    <p>Four more items can swing a decision. <strong>Health insurance:</strong> compare premiums, deductibles, and out-of-pocket maximums, not just "we have great benefits" — a $200-a-month premium difference is $2,400 a year. <strong>Equity:</strong> for startups, value stock options at zero unless you understand the strike price, vesting, and last valuation; for public companies, count RSUs at current price with the vesting schedule. <strong>Remote work:</strong> skipping a commute saves real money — the IRS values driving at about 70 cents a mile, so a 30-mile round trip is $21 a day, over $5,000 a year, before counting your time. <strong>Growth:</strong> the job that pays $10,000 less but promotes you in 18 months usually wins within three years.</p>
+    <h2>Taxes and Cost of Living: The Quiet Killers</h2>
+    <p>A $20,000 raise that requires moving from a no-income-tax state to one with a 10 percent income tax is barely a raise at all. Run both offers through a paycheck calculator with the correct state withholding before comparing, and price the actual housing markets — not the metro averages, the neighborhoods you would really live in. Remote offers add a twist: some companies adjust pay by location, so confirm whether the number quoted is national or geo-adjusted.</p>
+    <h2>Making the Final Call</h2>
+    <p>Do the math first, then let judgment in. Compute both true numbers, note the gap, and then ask: is the non-monetary difference — the manager, the work, the commute, the trajectory — worth the gap? If Offer A wins by $8,000 a year but Offer B has the team you would run through walls for, take Offer B with open eyes. The point of the calculator is not to make the decision for you; it is to make sure you are not making a $150,000 decision on a $30,000 misunderstanding. Negotiate, too — the best use of a second offer is as polite leverage: "I prefer your team; can you close the gap on the match?" Competing offers, handled gracefully, routinely add 5 to 10 percent.</p>
+    <h2>Negotiating With the True Number</h2>
+    <p>The calculator's real power shows up in negotiation. Instead of "I was hoping for more," you can say: "Your offer's total compensation is $141,000 against my other offer's $149,000 — the gap is mostly the 401(k) match and bonus target. Can we move the match from 3 to 5 percent?" Specificity signals that you have done the work, and it gives the hiring manager something concrete to take upstairs — managers can rarely invent salary out of thin air, but they can often move a match, a sign-on bonus, or PTO days. Ask for the gap-closer, not a round number: "close the $8,000 gap" beats "give me $150k" because it frames the negotiation as problem-solving. And negotiate everything in the same conversation — salary, bonus, match, start date, remote days — since concessions trade against each other. Get the final numbers in the written offer letter, not just email; verbal promises have a way of evaporating between the handshake and the first paycheck.</p>
+  </article>
+  <section class="faq-sec" aria-label="Frequently asked questions">
+    <h2>Frequently asked questions</h2>
+<details><summary>How do I compare two job offers beyond salary?</summary><p>Convert each offer to total annual compensation: base salary plus expected bonus plus employer retirement match plus the dollar value of PTO (salary divided by 260 working days per day off). Then divide by actual working hours for a true hourly rate. The offer with the higher true number usually wins, before you weigh intangibles like the team and growth.</p></details>
+<details><summary>How should I value a target bonus?</summary><p>Use last year&#x27;s actual payout for the role, not the target percentage on the offer letter — payouts commonly range from 50 to 120 percent of target. Ask the recruiter what the role paid out last year and whether you must be employed on the payout date to receive it.</p></details>
+<details><summary>Is a 401(k) match really worth that much?</summary><p>Yes. A 5% match on $120,000 is $6,000 a year of extra pay, and invested over decades it compounds into six figures. But check the vesting schedule first — with three-year cliff vesting, the match is worth zero if you leave after two years.</p></details>
+<details><summary>How do you put a dollar value on PTO days?</summary><p>Divide annual salary by 260 working days to get your daily rate, then multiply by PTO days. At $120,000 salary, each PTO day is worth about $462. For unlimited PTO policies, enter around 12 days — people with unlimited plans take fewer days on average than those with defined banks.</p></details>
+<details><summary>What is the true hourly rate and why does it matter?</summary><p>It is total compensation divided by actual working hours (2,080 minus PTO days times 8). It captures both sides of the deal: more pay raises it, more time off raises it too by shrinking the hours you work. It is the fairest single number for comparing offers with different PTO or expected hours.</p></details>
+<details><summary>Should I tell a company about my other offer?</summary><p>Yes, carefully. A competing offer is your strongest negotiating leverage: express genuine preference for their team and ask if they can close the compensation gap. Keep it factual and polite — never bluff with an offer you do not have, and never share the other company&#x27;s name unless asked directly.</p></details>
+  </section>
+</main>
+<div class="no-print mx-auto max-w-6xl px-4 sm:px-6 pb-4" role="complementary" aria-label="Advertisement">
+  <div class="mx-auto text-center" style="max-width:300px">
+    <span class="block text-[10px] tracking-[0.18em] uppercase text-slate-400 mb-1.5">Advertisement</span>
+    <div class="flex justify-center overflow-hidden">
+      <script>
+      (function(grnp){
+      var d = document,
+          s = d.createElement('script'),
+          l = d.currentScript || d.scripts[d.scripts.length - 1];
+      s.settings = grnp || {};
+      s.src = "\/\/peacefulbicycle.com\/bnXtVJsnd.GElF0oYVWQcY\/Qe\/mf9qu-ZqUtlZk\/PzTHcx1LM\/jWIZwkMTj\/U\/t-NrzmUnyOMsj\/AzydO\/Qx";
+      s.async = true;
+      s.referrerPolicy = 'no-referrer-when-downgrade';
+      l.parentNode.insertBefore(s, l);
+      })({})
+      </script>
+    </div>
+  </div>
+</div>
+<footer class="fx-footer">
+  <div class="fx-container">
+    <div class="fx-brand">OfferCompare</div>
+    <p>OfferCompare turns two job offers into one true number each — salary plus bonus, retirement match and monetized PTO — so you can see which one really pays more.</p>
+    <nav aria-label="Footer">
+      <a href="https://fixoraa.tech">Home</a>
+      <a href="https://fixoraa.tech">More Tools</a>
+    </nav>
+    <p class="fx-credit">Made by <a href="https://fixoraa.tech">Fixoraa</a> &middot; Free forever, no signup.</p>
+  </div>
+</footer>
+<script>
+/* OfferCompare — pure logic. True compensation of one job offer:
+   salary + bonus + employer retirement match + monetized PTO,
+   divided by actual working hours for a true hourly rate. */
+function offerCompare(salary, bonusPct, retireMatch, ptoDays) {
+  salary = Math.max(0, Number(salary) || 0);
+  bonusPct = Math.max(0, Number(bonusPct) || 0);
+  retireMatch = Math.max(0, Number(retireMatch) || 0);
+  ptoDays = Math.max(0, Number(ptoDays) || 0);
+  var dailyValue = salary / 260; // 260 working days/year
+  var ptoValue = ptoDays * dailyValue;
+  var totalComp = salary * (1 + bonusPct) + salary * retireMatch + ptoValue;
+  var workHours = 2080 - ptoDays * 8;
+  return {
+    totalComp: totalComp,
+    ptoValue: ptoValue,
+    trueHourly: workHours > 0 ? totalComp / workHours : 0,
+    workHours: workHours
+  };
+}
+
+if (typeof document !== 'undefined') {
+  // Page wiring (two offer panels + verdict) goes in the HTML inline script.
+}
+
+</script>
+<script>
+(function(){
+  function v(id){return parseFloat(document.getElementById(id).value)||0;}
+  function t(id){return document.getElementById(id).value;}
+  function fmt(n,d){return n.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+  function one(pfx){
+    var r=offerCompare(v(pfx+'sal'),v(pfx+'bonus')/100,v(pfx+'match')/100,v(pfx+'pto'));
+    document.getElementById(pfx+'total').textContent='$'+fmt(r.totalComp,0);
+    document.getElementById(pfx+'ptoV').textContent='$'+fmt(r.ptoValue,0);
+    document.getElementById(pfx+'hours').textContent=fmt(r.workHours,0);
+    document.getElementById(pfx+'hourly').textContent='$'+fmt(r.trueHourly,2);
+    return r;
+  }
+  function calc(){
+    var a=one('oc-a'),b=one('oc-b');
+    var na=t('oc-aname')||'Offer A',nb=t('oc-bname')||'Offer B';
+    var big=document.getElementById('oc-verdict-big'),small=document.getElementById('oc-verdict-small');
+    document.getElementById('oc-panelA').classList.remove('oc-winner');
+    document.getElementById('oc-panelB').classList.remove('oc-winner');
+    if(a.totalComp===0&&b.totalComp===0){big.textContent='Enter both offers to see the winner';return;}
+    var w,wn,wp;
+    if(a.totalComp>=b.totalComp){w=a;wn=na;wp='oc-panelA';}else{w=b;wn=nb;wp='oc-panelB';}
+    document.getElementById(wp).classList.add('oc-winner');
+    var gap=Math.abs(a.totalComp-b.totalComp);
+    var hgap=Math.abs(a.trueHourly-b.trueHourly);
+    big.textContent=wn+' wins by $'+fmt(gap,0)+'/yr';
+    small.textContent='True hourly: '+na+' $'+fmt(a.trueHourly,2)+' vs '+nb+' $'+fmt(b.trueHourly,2)+' (gap $'+fmt(hgap,2)+'/hr)';
+  }
+  ['oc-aname','oc-asal','oc-abonus','oc-amatch','oc-apto','oc-bname','oc-bsal','oc-bbonus','oc-bmatch','oc-bpto'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
